@@ -10,7 +10,7 @@
  
 <form action='#' method='post'> 
 Enter a text:<br/> 
-<input type='text' name='strex' id='strex' size='25' /> <input type='button' id='cryptstr' value='Encrypt'/><br/> 
+<input type='text' name='strex' id='strex' size='25' /> <input type='button' id='bt' value='Encrypt'/><br/> 
 SHA1 hash string:<br/> 
 <input type='text' name='inp' id='inp' size='35' /> 
 </form> 
@@ -31,7 +31,7 @@ H0=(H0+A)&0x0ffffffff;H1=(H1+B)&0x0ffffffff;H2=(H2+C)&0x0ffffffff;H3=(H3+D)&0x0f
 var temp=cvt_hex(H0)+cvt_hex(H1)+cvt_hex(H2)+cvt_hex(H3)+cvt_hex(H4);return temp.toLowerCase();} 
  
 // register onclick events for Encrypt button 
-document.getElementById('cryptstr').onclick = function() { 
+document.getElementById('bt').onclick = function() { 
 var txt_string = document.getElementById('strex').value; // gets data from input text 
  
 // encrypts data and adds it in #strcrypt element 
